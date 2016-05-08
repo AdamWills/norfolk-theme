@@ -19,6 +19,89 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
+
+        function hideNavigation() {
+          $('.banner__nav > li').removeClass('active');
+        }
+
+        function setUpNavigation() {
+          $('.banner__nav > li.has-children > a').on('click', function(e) {
+            if (!$(this).parent('li').hasClass('active')) {
+            hideNavigation();
+            }
+            $(this).parent('li').toggleClass('active');
+            e.preventDefault();
+          });
+
+          $('.banner__nav .close').on('click', function() {
+            hideNavigation();
+          });
+
+          $(document).on('click',function(e) {
+            hideNavigation();
+          });
+
+          $('.banner__nav li').on('click', function(e) {
+            e.stopPropagation();
+          });
+        }
+
+        function configureSearch() {
+          $('input.gsc-input').attr('placeholder', 'Search Norfolk...');
+        }
+
+        function setupCustomSearch() {
+          window.__gcse = { callback: configureSearch };
+          var cx = '013261640645476133726:_5panafhwtu';
+          var gcse = document.createElement('script');
+          gcse.type = 'text/javascript';
+          gcse.async = true;
+          gcse.src = (document.location.protocol === 'https:' ? 'https:' : 'http:') +
+              '//cse.google.com/cse.js?cx=' + cx;
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(gcse, s);
+        }
+
+        function setUpMobileNavButton() {
+          $nav = $('.banner__nav');
+          $('.btn-mobile-nav-toggle').on('click', function() {
+            $nav.toggleClass('open');
+          });
+        }
+
+        function setUpNewsFeed() {
+          var $ticker = $('.news-ticker__feed .ticker'),
+              $playButton = $('.news-ticker__pause'),
+              $prevButton = $('.news-ticker__prev'),
+              $nextButton = $('.news-ticker__next'),
+              paused = false;
+
+          $ticker.vTicker('init',{height: 32});
+
+          // setup play/pause button
+          $playButton.on('click', function() {
+            paused = !paused;
+            var state = paused ? 'play' : 'pause';
+            $('#play-icon-selector').attr('xlink:href','#' + state + '-icon');
+            $ticker.vTicker('pause',paused);
+          });
+
+          $prevButton.on('click', function() {
+            $ticker.vTicker('pause',paused);
+            $ticker.vTicker('prev',{animate: false});
+          });
+
+          $nextButton.on('click', function() {
+            $ticker.vTicker('pause',paused);
+            $ticker.vTicker('next',{animate: false});
+          });
+        }
+
+        setUpNavigation();
+        setupCustomSearch();
+        setUpNewsFeed();
+        setUpMobileNavButton();
+
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired

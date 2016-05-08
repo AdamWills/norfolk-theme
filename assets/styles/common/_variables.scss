@@ -6,4 +6,25 @@ $main-sm-columns:       12;
 $sidebar-sm-columns:    4;
 
 // Colors
-$brand-primary:         #27ae60;
+$brand-green:            #065B4A;
+$brand-gold:             #987D4D;
+$brand-primary:          $brand-green;
+
+$old-green:             #81c556;
+$old-blue:              #57b8e3;
+$old-orange:            #e09128;
+$old-purple:            #a45c9b;
+
+$font-size-base:        16px;
+
+// Borders
+$border-radius:          0;
+$border-radius-lg:       0;
+$border-radius-sm:       0;
+
+// Buttons
+$btn-primary-bg:      $brand-green;
+
+// Breakpoints for home page
+$breakpoint-mobile-nav-min:  62rem;
+$breakpoint-mobile-nav-max:  61.9rem;
