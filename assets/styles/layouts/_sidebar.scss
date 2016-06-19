@@ -1,0 +1,17 @@
+.sidebar {
+  margin-top: 131px;
+
+  h2 {
+    @extend .h4;
+  }
+
+  h2:first-of-type {
+    margin-top: 0;
+  }
+
+  .menu {
+    padding-left: 0;
+    list-style: none;
+
+  }
+}

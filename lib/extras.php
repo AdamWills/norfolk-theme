@@ -36,7 +36,7 @@ add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
  * Automatically add subpages to primary navigation
  */
 function add_sub_pages($items, $args) {
-  if ('primary_navigation' === $args->theme_location) :
+  //if ('primary_navigation' === $args->theme_location) :
     global $post;
     $tmp = array();
     foreach ($items as $key => $i) {
@@ -64,7 +64,7 @@ function add_sub_pages($items, $args) {
         $c->object                = 'page';
         $c->type                  = 'post_type';
         $c->type_label            = 'Page';
-        $c->url                   = get_permalink( $c->ID);
+        $c->url                   = get_permalink($c->ID);
         $c->title                 = $c->post_title;
         $c->target                = '';
         $c->attr_title            = '';
@@ -72,15 +72,15 @@ function add_sub_pages($items, $args) {
         $c->classes               = array();
         $c->xfn                   = '';
         $c->current               = ($post->ID == $c->ID)? true: false;
-        $c->current_item_ancestor = ($post->ID == $c->post_parent)? true: false; //probbably not right
+        $c->current_item_ancestor = ($post->ID == $c->post_parent)? true: false;
         $c->current_item_parent   = ($post->ID == $c->post_parent)? true: false;
         $tmp[] = $c;
       }
     }
     return $tmp;
-  else:
-    return $items;
-  endif;
+  // else:
+  //   return $items;
+  // endif;
 }
 add_filter('wp_nav_menu_objects', __NAMESPACE__ . '\\add_sub_pages', 10, 2);
 
