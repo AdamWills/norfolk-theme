@@ -69,6 +69,19 @@
           });
         }
 
+        setUpNavigation();
+        setupCustomSearch();
+        setUpMobileNavButton();
+
+      },
+      finalize: function() {
+        // JavaScript to be fired on all pages, after page specific JS is fired
+      }
+    },
+    // Home page
+    'home': {
+      init: function() {
+        // JavaScript to be fired on the home page
         function setUpNewsFeed() {
           var $ticker = $('.news-ticker__feed .ticker'),
               $playButton = $('.news-ticker__pause'),
@@ -97,20 +110,7 @@
           });
         }
 
-        setUpNavigation();
-        setupCustomSearch();
         setUpNewsFeed();
-        setUpMobileNavButton();
-
-      },
-      finalize: function() {
-        // JavaScript to be fired on all pages, after page specific JS is fired
-      }
-    },
-    // Home page
-    'home': {
-      init: function() {
-        // JavaScript to be fired on the home page
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS
