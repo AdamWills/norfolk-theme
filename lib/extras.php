@@ -36,7 +36,7 @@ add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
  * Automatically add subpages to primary navigation
  */
 function add_sub_pages($items, $args) {
-  //if ('primary_navigation' === $args->theme_location) :
+  if ('primary_navigation' === $args->theme_location) :
     global $post;
     $tmp = array();
     foreach ($items as $key => $i) {
@@ -78,9 +78,9 @@ function add_sub_pages($items, $args) {
       }
     }
     return $tmp;
-  // else:
-  //   return $items;
-  // endif;
+  else:
+    return $items;
+  endif;
 }
 add_filter('wp_nav_menu_objects', __NAMESPACE__ . '\\add_sub_pages', 10, 2);
 
