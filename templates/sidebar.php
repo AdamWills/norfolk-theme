@@ -1,3 +1,7 @@
+<div class="search">
+  <gcse:searchbox-only enableAutoComplete="true" resultsUrl="<?= esc_url( home_url( '/' ) ); ?>" queryParameterName="s"></gcse:searchbox-only>
+</div>
+
 <div class="related-pages">
 <?php
   // get and display child pages

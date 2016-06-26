@@ -1,5 +1,5 @@
 .sidebar {
-  margin-top: 131px;
+  margin-top: 88px; // the height to match the top of the sidebar with the page title
 
   h2 {
     @extend .h4;
@@ -13,6 +13,10 @@
     padding-left: 0;
     list-style: none;
 
+  }
+
+  .search {
+    margin-bottom: 36px;
   }
 }
 

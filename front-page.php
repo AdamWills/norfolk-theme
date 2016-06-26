@@ -3,7 +3,7 @@
 	<div class="container-fluid container-search">
     <div class="site-search">
       <div class="home-search">
-            <gcse:searchbox-only enableAutoComplete="true" resultsUrl="http://www.norfolkcounty.ca/" queryParameterName="s"></gcse:searchbox-only>
+            <gcse:searchbox-only enableAutoComplete="true" resultsUrl="<?= esc_url( home_url( '/' ) ); ?>" queryParameterName="s"></gcse:searchbox-only>
 	  	</div>
   	</div>
   </div>
