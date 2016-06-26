@@ -18,21 +18,29 @@ dd + dt {
   margin-top: $line-height-computed;
 }
 
-.content a {
-  text-decoration: underline;
-  color: $link-color;
+.content {
 
-  &:hover {
-    color: lighten($link-color,5%);
+  a {
+    text-decoration: underline;
+    color: $link-color;
+
+    &:hover {
+      color: lighten($link-color,5%);
+    }
+
+    &:focus {
+      background-color: $brand-primary;
+      color: #fff;
+      outline: 4px solid $brand-primary;
+      outline-offset: initial;
+    }
   }
 
-  &:focus {
-    background-color: $brand-primary;
-    color: #fff;
-    outline: 4px solid $brand-primary;
-    outline-offset: initial;
+  li {
+    margin-bottom: 0.75rem;
   }
 }
+
 
 // Little fix to prevent this container for showing focus
 .content {
