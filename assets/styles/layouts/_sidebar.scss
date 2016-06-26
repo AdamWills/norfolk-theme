@@ -15,3 +15,18 @@
 
   }
 }
+
+.related-pages {
+  .page-title {
+    display: block;
+    font-weight: 700;
+    font-size: 1.1em;
+  }
+  li {
+    margin-bottom: 0.75rem;
+  }
+
+  ul + h2 {
+    margin-top: 1.5rem;
+  }
+}
