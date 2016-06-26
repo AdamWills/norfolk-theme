@@ -17,3 +17,26 @@ html, body {
 dd + dt {
   margin-top: $line-height-computed;
 }
+
+.content a {
+  text-decoration: underline;
+  color: $link-color;
+
+  &:hover {
+    color: lighten($link-color,5%);
+  }
+
+  &:focus {
+    background-color: $brand-primary;
+    color: #fff;
+    outline: 4px solid $brand-primary;
+    outline-offset: initial;
+  }
+}
+
+// Little fix to prevent this container for showing focus
+.content {
+  &:focus {
+    outline: none;
+  }
+}

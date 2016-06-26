@@ -3,7 +3,6 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem 0;
   margin-top: 44px;
 
   ul {
@@ -27,11 +26,16 @@ footer {
   a {
     color: #fff;
     display: inline-block;
-    padding: 0.3rem 0;
+    padding: 1rem;
 
-    &:hover, &:focus, &:active {
+    &:hover, &:active {
       color: #fff;
       text-decoration: underline;
+    }
+
+    &:focus {
+      background-color: white;
+      color: $brand-primary;
     }
   }
 }
