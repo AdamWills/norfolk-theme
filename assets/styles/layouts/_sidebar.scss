@@ -1,8 +1,12 @@
 .sidebar {
-  margin-top: 88px; // the height to match the top of the sidebar with the page title
+  @media screen and (min-width: $screen-sm-min) {
+    margin-top: 88px; // the height to match the top of the sidebar with the page title
+  }
 
   h2 {
     @extend .h4;
+    border-top: 8px solid $brand-green;
+    padding-top: 1rem;
   }
 
   h2:first-of-type {

@@ -8,3 +8,11 @@
   top: 0;
   z-index: 1;
 }
+
+.page-header {
+  margin: 22px 0;
+  border-bottom: none;
+  .breadcrumbs {
+    margin-bottom: 44px;
+  }
+}
