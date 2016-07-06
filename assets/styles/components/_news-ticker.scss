@@ -65,6 +65,13 @@
   a {
     white-space: nowrap;
     color: #fff;
+
+    &:focus {
+      background-color: #fff;
+      color: $brand-primary;
+      outline: 3px solid #fff;
+      text-decoration: none;
+    }
   }
 
 
