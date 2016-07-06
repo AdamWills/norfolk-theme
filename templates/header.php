@@ -1,5 +1,6 @@
 <header class="banner">
-    <a href="#content" class="a11y-skip-content sr-only sr-only-focusable"><?= __('Skip to main content', 'sage'); ?></a>
+    <?php $skip = is_home() ? '#gsc-i-id1' : '#content'; ?>
+    <a href="<?= $skip; ?>" class="a11y-skip-content sr-only sr-only-focusable"><?= __('Skip to main content', 'sage'); ?></a>
     <div class="logo">
       <a  href="<?= esc_url(home_url('/')); ?>"><?php get_template_part( 'dist/images/logo.svg' ); ?></a>
     </div>
