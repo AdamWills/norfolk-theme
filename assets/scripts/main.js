@@ -51,13 +51,11 @@
         }
 
         function setupCustomSearch() {
-          window.__gcse = { callback: configureSearch };
-          var cx = '013261640645476133726:_5panafhwtu';
+          var cx = '004130032592206704539:7kinxktmcfm';
           var gcse = document.createElement('script');
           gcse.type = 'text/javascript';
           gcse.async = true;
-          gcse.src = (document.location.protocol === 'https:' ? 'https:' : 'http:') +
-              '//cse.google.com/cse.js?cx=' + cx;
+          gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
           var s = document.getElementsByTagName('script')[0];
           s.parentNode.insertBefore(gcse, s);
         }

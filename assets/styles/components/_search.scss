@@ -13,6 +13,7 @@
 
 .site-search {
   //margin-top: -9rem; // height of banner
+  height: 66px;
   @media screen and (max-width: $breakpoint-mobile-nav-max) {
     .input-group {
       display: block;
