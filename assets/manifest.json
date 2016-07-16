@@ -13,6 +13,11 @@
       ],
       "main": true
     },
+    "contrast.css": {
+      "files": [
+        "styles/contrast.scss"
+      ]
+    },
     "customizer.js": {
       "files": [
         "scripts/customizer.js"

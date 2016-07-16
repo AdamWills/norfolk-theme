@@ -1,3 +1,10 @@
+<?php if (Roots\Sage\A11y\is_high_contrast_mode()) : ?>
+  <div class="a11y-toggle">
+    <p><?php _e('High Contrast Mode is on.', 'sage'); ?></p>
+    <p><a href="?ss=default" class="btn btn-primary"><?php _e('Turn off High Contrast Mode', 'sage'); ?></a></p>
+  </div>
+<?php endif; ?>
+
 <div class="search">
   <gcse:searchbox-only enableAutoComplete="true" resultsUrl="<?= esc_url( home_url( '/' ) ); ?>" queryParameterName="s"></gcse:searchbox-only>
 </div>

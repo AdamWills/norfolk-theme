@@ -1,0 +1,24 @@
+$link-color: #f7df07;
+$background-color: #151515;
+$text-color: #fff;
+
+body {
+  background: $background-color;
+  color: $text-color;
+}
+
+.content a {
+  color: $link-color;
+
+  &:hover, &:focus {
+    background-color: $link-color;
+    outline: 3px solid $link-color;
+    color: $background-color;
+  }
+}
+
+.content .btn-primary {
+  background-color: $link-color;
+  color: $background-color;
+  text-decoration: none;
+}

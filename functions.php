@@ -16,7 +16,8 @@ $sage_includes = [
   'lib/titles.php',    // Page titles
   'lib/wrapper.php',   // Theme wrapper class
   'lib/customizer.php', // Theme customizer
-  'lib/nav-walker.php' // Custom Nav Walker
+  'lib/nav-walker.php', // Custom Nav Walker
+  'lib/accessibility.php' // Accessibility options
 ];
 
 foreach ($sage_includes as $file) {
