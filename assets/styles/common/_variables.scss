@@ -35,6 +35,11 @@ $border-radius-sm:       0;
 // Buttons
 $btn-primary-bg:      $brand-green;
 
+// Alerts
+$state-warning-text:             #eee !default;
+$state-warning-bg:               $brand-green !default;
+$state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%) !default;
+
 // Breakpoints for home page
 $breakpoint-mobile-nav-min:  62rem;
 $breakpoint-mobile-nav-max:  61.9rem;
