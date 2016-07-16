@@ -1,6 +1,7 @@
 .sidebar {
   @media screen and (min-width: $screen-sm-min) {
     margin-top: 88px; // the height to match the top of the sidebar with the page title
+    border-left: 1px solid #eee;
   }
 
   h2 {
