@@ -46,6 +46,13 @@
 
   .gs-webResult.gs-result a.gs-title:link, .gs-webResult.gs-result a.gs-title:link b, .gs-imageResult a.gs-title:link, .gs-imageResult a.gs-title:link b, .search-results .gs-webResult.gs-result a.gs-title:link {
     color: $brand-green;
+    &:focus {
+      color: #fff;
+    }
+  }
+
+  a.gs-title:visited:focus, a.gs-title:focus b {
+    color: #fff !important;
   }
 
   .gsc-results .gsc-cursor-box .gsc-cursor-current-page, .gsc-results .gsc-cursor-box .gsc-cursor-page {
