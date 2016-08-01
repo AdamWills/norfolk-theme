@@ -4,11 +4,12 @@ namespace Roots\Sage\A11y;
 
 function set_contrast_cookie() {
   setcookie( 'high-contrast', true, 7 * DAYS_IN_SECONDS, COOKIEPATH, COOKIE_DOMAIN );
+  $_COOKIE['high-contrast'] = true;
 }
 
 function delete_contrast_cookie() {
+  setcookie( 'high-contrast', false, time() - ( 15 * 60 ), COOKIEPATH, COOKIE_DOMAIN );
   unset( $_COOKIE['high-contrast'] );
-  setcookie( 'high-contrast', false, time() - ( 15 * 60 ) );
 }
 
 function is_high_contrast_mode() {
