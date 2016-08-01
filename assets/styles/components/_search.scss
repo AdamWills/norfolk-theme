@@ -30,6 +30,15 @@
   background-color: #fff;
 }
 
+.gsc-input .gsst_a {
+    padding-top: 8px;
+    padding-right: 4px;
+}
+
+.gsc-input .gsst_a .gscb_a {
+  color: $brand-green;
+}
+
 td.gsib_a, td.gsib_b {
   border: 1px solid $brand-green;
 }

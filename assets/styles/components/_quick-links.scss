@@ -46,14 +46,12 @@
     }
 
     &:last-of-type {
-      //text-align: right;
+      margin-bottom: 0;
     }
 
     a {
       display: block;
-      padding: 0.5rem 0;
       color: #fff;
-      padding: 1rem 0;
       display: inline-block;
       @media screen and (min-width: $breakpoint-mobile-nav-min) {
         padding: 0;
