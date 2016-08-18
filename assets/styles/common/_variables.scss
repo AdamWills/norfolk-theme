@@ -11,6 +11,7 @@ $grid-gutter-width:     60px;
 $brand-green:            #065B4A;
 $brand-gold:             #987D4D;
 $brand-primary:          $brand-green;
+$grey-light:             #eee;
 
 $link-color:            #047b64;
 
@@ -36,7 +37,7 @@ $border-radius-sm:       0;
 $btn-primary-bg:      $brand-green;
 
 // Alerts
-$state-warning-text:             #eee !default;
+$state-warning-text:             $grey-light !default;
 $state-warning-bg:               $brand-green !default;
 $state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%) !default;
 

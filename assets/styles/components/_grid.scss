@@ -10,3 +10,7 @@
   @include make-sm-column($sidebar-sm-columns);
   //@include make-sm-column-pull($main-sm-columns - $sidebar-sm-columns);
 }
+
+#content {
+  display: flex;
+}
