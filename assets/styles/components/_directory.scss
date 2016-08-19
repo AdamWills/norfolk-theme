@@ -1,0 +1,16 @@
+.az_directory_header {
+  list-style: none;
+  padding-left: 0;
+  display: none;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: $screen-sm-min) {
+  select.az_directory {
+    display: none;
+  }
+
+  .az_directory_header {
+    display: flex;
+  }
+}

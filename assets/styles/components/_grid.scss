@@ -12,5 +12,7 @@
 }
 
 #content {
-  display: flex;
+  @media screen and (min-width: $screen-sm-min) {
+    display: flex;
+  }
 }
