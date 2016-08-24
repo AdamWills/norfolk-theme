@@ -71,9 +71,9 @@ function add_sub_pages($items, $args) {
         $c->description           = '';
         $c->classes               = array();
         $c->xfn                   = '';
-        $c->current               = ($post->ID == $c->ID)? true: false;
-        $c->current_item_ancestor = ($post->ID == $c->post_parent)? true: false;
-        $c->current_item_parent   = ($post->ID == $c->post_parent)? true: false;
+        $c->current               = ($post && $post->ID == $c->ID)? true: false;
+        $c->current_item_ancestor = ($post && $post->ID == $c->post_parent)? true: false;
+        $c->current_item_parent   = ($post && $post->ID == $c->post_parent)? true: false;
         $tmp[] = $c;
       }
     }
