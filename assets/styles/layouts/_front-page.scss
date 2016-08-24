@@ -1,5 +1,4 @@
 body.home {
-
   display: flex;
   flex-direction: column;
   background-color: #fff;
@@ -7,6 +6,9 @@ body.home {
   @media screen and (min-width: $breakpoint-mobile-nav-min) {
     background-size: cover;
     background-position: center;
+  }
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    height: 100vh;
   }
 
   .main {
@@ -18,4 +20,3 @@ body.home {
   }
 
 }
-

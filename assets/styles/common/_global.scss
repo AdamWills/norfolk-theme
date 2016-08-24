@@ -5,13 +5,15 @@ html {
 html, body {
   min-height: 100vh;
 }
- body {
+body {
   display: flex;
   flex-direction: column;
- }
+}
 
 .wrap {
+  display: flex;
   flex: 1;
+  flex-basis: auto;
 }
 
 dt {

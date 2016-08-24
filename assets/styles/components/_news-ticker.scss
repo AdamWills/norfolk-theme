@@ -8,12 +8,15 @@
   padding: 0 1rem;
   width: 90vw;
   @media screen and (min-width: $breakpoint-mobile-nav-min) {
+    width: 80vw;
+  }
+  @media screen and (min-width: $breakpoint-large-nav-min) {
     width: 60vw;
   }
 }
 
 .news-ticker__controls {
-  width: 120px;
+  width: 128px;
   padding-top: 4px;
 
   button {

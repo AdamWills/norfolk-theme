@@ -2,28 +2,63 @@
   background-color: $brand-green;
   border-bottom: 3px solid #fff;
 
+
   @media screen and (min-width: $breakpoint-mobile-nav-min) {
-    height: 7rem;
+    min-height: 5rem;
     display: flex;
     align-items: center;
+    position: relative;
   }
 
   .logo {
     padding: 26px 0;
     @media screen and (min-width: $breakpoint-mobile-nav-min) {
       position: absolute;
-      width: 200px;
+      top: -14px;
+      width: 150px;
+      left: 12px;
+    }
+
+    @media screen and (min-width: $breakpoint-large-nav-min) {
+      top: -8px;
     }
 
     svg {
       height: 3rem;
+      max-width: 100%;
     }
   }
 }
 
-.home .banner .logo svg {
-  height: 4rem;
+.home .banner {
+  @media screen and (min-width: $breakpoint-large-nav-min) {
+    min-height: 7rem;
+  }
+
+  .logo {
+    @media screen and (min-width: $breakpoint-large-nav-min) {
+      width: 200px;
+      top: 0;
+    }
+    svg {
+      height: 4rem;
+    }
+  }
+
+  .banner__nav {
+    @media screen and (min-width: $breakpoint-large-nav-min) {
+      margin-left: 200px;
+    }
+
+    &  > li {
+      @media screen and (min-width: $breakpoint-large-nav-min) {
+        height: 7rem;
+      }
+    }
+  }
+
 }
+
 
 
 
@@ -61,17 +96,17 @@
     width: 100%;
     height: 100%;
     background-color: transparent;
-    margin-left: 200px;
+    margin-left: 150px;
   }
+
 
   &.open {
     display: block;
   }
 
   & > li {
-    height: 100%;
+    height: 5rem;
     flex-grow: 1;
-
 
     & > a {
       justify-content: center;
@@ -108,10 +143,13 @@
     align-items: center;
     height: 100%;
     padding: 1rem 2rem;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     color: #fff;
     @media screen and (min-width: $breakpoint-mobile-nav-min) {
       color: #fff;
+    }
+    @media screen and (min-width: $breakpoint-large-nav-min) {
+      font-size: 1.6rem
     }
   }
 }
