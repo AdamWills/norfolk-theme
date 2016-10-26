@@ -14,6 +14,8 @@ function title() {
     }
   } elseif (is_tag()) {
     return single_tag_title(__('Pages related to ', 'sage'), false);
+  } elseif ( is_post_type_archive()  ) {
+    return post_type_archive_title( '', false );
   } elseif (is_archive()) {
     return get_the_archive_title();
   } elseif (is_search()) {
